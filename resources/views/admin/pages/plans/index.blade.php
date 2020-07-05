@@ -26,7 +26,7 @@
                     <tr>
                         <th>Nome</th>
                         <th>Preço</th>
-                        <th style="width: 50px;">Ações</th>
+                        <th style="width: 250px;">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +39,7 @@
                                 R$ {{ number_format($plan->price, 2, ',', '.') }}
                             </td>
                             <td style="width: 200px;">
+                                <a href="{{ route('details.plan.index', $plan->url) }}" class="btn btn-info">Detalhes</a>
                                 <a href="{{ route('plans.edit', $plan->url) }}" class="btn btn-info">EDITAR</a>
                                 <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">VER</a>
                             </td>
